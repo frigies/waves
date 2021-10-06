@@ -9,6 +9,8 @@ const PRICE_API1 = `https://api.cryptonator.com/api/ticker/waves-usd`;
 const PRICE_API2 = `https://api.cryptonator.com/api/ticker/waves-rub`;
 const PRICE_API3 = `https://api.cryptonator.com/api/ticker/waves-xrp`;
 const PRICE_API4 = "https://api.wavesplatform.com/v0/transactions/exchange";
+const PRICE_API5 = `https://api.cryptonator.com/api/ticker/waves-btc`;
+const PRICE_API6 = `https://api.cryptonator.com/api/ticker/waves-eur`;
 
 const MATCHER = "3PEjHv3JGjcWNpYEEkif2w8NXV4kbhnoGgu"; // адрес матчера - берётся из документации
 
@@ -220,6 +222,22 @@ async function getCourse(assetId, currency = "USD", kind = "buy"){ // основ
         case "WAVES":
             price1 = 1;
             r = 4; //округляем до 4 знаков после запятой
+            break;
+        case "BTC":
+            let response5 = await axios.get(PRICE_API5);
+            let data5 = response5.data;
+
+            price1 = data5["ticker"]["price"];
+            price1 = parseFloat(price1);
+            r = 6; //округляем до 6 знаков после запятой
+            break;
+        case "EUR":
+            let response6 = await axios.get(PRICE_API6);
+            let data6 = response6.data;
+
+            price1 = data6["ticker"]["price"];
+            price1 = parseFloat(price1);
+            r = 2; //округляем до 2 знаков после запятой
             break;
     }
     let price2 = price0 * price1; // перемножаем две цены (цену Frigies к Waves на цену Waves к монете)
