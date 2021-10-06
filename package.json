@@ -1,0 +1,55 @@
+{
+  "_from": "@frigies/waves",
+  "_id": "@frigies/waves@0.0.7",
+  "_inBundle": false,
+  "_integrity": "sha512-5yDqSJBWiagzJVX8oPOcVtNEfQK76ZjyOUNQDa7spBm2nDFnL89YcA5w+/Ce2OrBwW3O3IrphRx5GDCQYG2z2A==",
+  "_location": "/@frigies/waves",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "@frigies/waves",
+    "name": "@frigies/waves",
+    "escapedName": "@frigies%2fwaves",
+    "scope": "@frigies",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@frigies/waves/-/waves-0.0.7.tgz",
+  "_shasum": "dfe155093a83e40ad28acdeff32063aee5c94d4e",
+  "_spec": "@frigies/waves",
+  "_where": "/home/linuxmint/Рабочий стол/Денис/Библиотеки и фреймворки/Для JS/frigies_waves/last",
+  "author": {
+    "name": "frigies"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@interop/base58-universal": "^1.0.0",
+    "@waves/waves-transactions": "^4.1.9-beta.5",
+    "axios": "^0.21.1",
+    "mathjs": "^9.4.3"
+  },
+  "deprecated": false,
+  "description": "Sending cryptocurrency Waves, Frigies and other assets on the blockchain Waves and getting last transactions and courses",
+  "keywords": [
+    "Waves",
+    "Frigies",
+    "blockchain",
+    "transactions",
+    "Waves.Exchange",
+    "courses",
+    "cryptocurrency"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "@frigies/waves",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.7"
+}
