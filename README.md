@@ -130,7 +130,7 @@ getWavesCourse(currency).then(course => {
     console.log(course);
 });
 </pre>
-<p>currency (string) - валюта, к которой нужно получить курс. Доступные варианты: "USD", "RUB", "XRP".</p>
+<p>currency (string) - валюта, к которой нужно получить курс. Доступные варианты: "USD", "RUB", "EUR", "BTC", "XRP".</p>
 <p>course (float) - текущий курс WAVES к USD, RUB или XRP.</p>
 <h2>Получение курса Frigies:</h2>
 <pre>
@@ -138,9 +138,9 @@ getFrigiesCourse(currency, kind).then(course => {
     console.log(course);
 });
 </pre>
-<p>currency (string) - валюта, к которой нужно получить курс. Доступные варианты: "WAVES", "USD", "RUB", "XRP".</p>
+<p>currency (string) - валюта, к которой нужно получить курс. Доступные варианты: "WAVES", "USD", "RUB", "EUR", "BTC", "XRP".</p>
 <p>kind (string) - вид курса: "buy" - курс покупки, берётся из нижнего стакана; "sell" - курс продажи, берётся из верхнего стакана; "avg" - усредённый курс с учётом объёмов торгов.
-<p>course (float) - текущий курс Frigies к WAVES, USD, RUB или XRP.</p>
+<p>course (float) - текущий курс Frigies к WAVES, USD, RUB, EUR, BTC или XRP.</p>
 <h2>Получение курса другого ассета:</h2>
 <pre>
 getAssetCourse(assetId, currency, kind).then(course => {
