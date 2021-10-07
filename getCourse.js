@@ -229,7 +229,7 @@ async function getCourse(assetId, currency = "USD", kind = "buy"){ // основ
 
             price1 = data5["ticker"]["price"];
             price1 = parseFloat(price1);
-            r = 6; //округляем до 6 знаков после запятой
+            r = 8; //округляем до 6 знаков после запятой
             break;
         case "EUR":
             let response6 = await axios.get(PRICE_API6);
@@ -237,7 +237,7 @@ async function getCourse(assetId, currency = "USD", kind = "buy"){ // основ
 
             price1 = data6["ticker"]["price"];
             price1 = parseFloat(price1);
-            r = 2; //округляем до 2 знаков после запятой
+            r = 4; //округляем до 2 знаков после запятой
             break;
     }
     let price2 = price0 * price1; // перемножаем две цены (цену Frigies к Waves на цену Waves к монете)
