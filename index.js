@@ -118,9 +118,9 @@ async function getWavesCourse(currency){
     return await getCourse(null, currency);
 }
 
-async function getFrigiesCourse(currency, kind, only_last=true){
+async function getFrigiesCourse(currency, kind, only_last=true, r=4){
     const assetId = "B3mFpuCTpShBkSNiKaVbKeipktYWufEMAEGvBAdNP6tu";
-    return await getCourse(assetId, currency, kind, only_last);    
+    return await getCourse(assetId, currency, kind, only_last, r);    
 }
 
 async function getWavesBalance(address) {
