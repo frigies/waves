@@ -151,10 +151,13 @@ async function getCourse(assetId, currency = "USD", kind = "avg", only_last=true
         let response = await axios.get(PRICE_API0, {params});
         let data = response.data;
         if (only_last){
-            let price = data.last;
+            let price = math.round(data.last, r);
             return price;
         }
         else {
+            for (key in data){
+                data[key] = math.round(data[key], r);
+            }
             return data;
         }   
     }
