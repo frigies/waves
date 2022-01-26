@@ -101,7 +101,7 @@ async function getAssetWavesCourse(assetId, kind = "buy", period = SEC_IN_DAY){ 
     }
 }
 
-async function getCourse(assetId, currency = "USD", kind = "avg", r=8){ // основная функция
+async function getCourse(assetId, currency = "USD", kind = "avg", only_last=true, r=8){ // основная функция
     if (assetId !== "B3mFpuCTpShBkSNiKaVbKeipktYWufEMAEGvBAdNP6tu"){
         let price0;
 
@@ -136,16 +136,27 @@ async function getCourse(assetId, currency = "USD", kind = "avg", r=8){ // ос�
 
         let price2 = price0 * price1;
         price2 = math.round(price2, r);
-        let data = {
-            "last": price2
+        if (only_last){
+            return price2;
         }
-        return data;
+        else {
+            let data = {
+                "last": price2
+            }
+            return data;
+        }
     }
     else {
         let params = {currency, kind};
         let response = await axios.get(PRICE_API0, {params});
         let data = response.data;
-        return data;   
+        if (only_last){
+            let price = data.last;
+            return price;
+        }
+        else {
+            return data;
+        }   
     }
 }
 
