@@ -156,7 +156,9 @@ async function getCourse(assetId, currency = "USD", kind = "avg", only_last=true
         }
         else {
             for (key in data){
-                data[key] = math.round(data[key], r);
+                if (data[key]){
+                    data[key] = math.round(data[key], r);
+                }
             }
             return data;
         }   
