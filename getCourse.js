@@ -2,7 +2,7 @@ const axios = require("axios");
 const math = require("mathjs");
 
 // ссылки, которые нам понадобятся для запросов:
-const PRICE_API0 = `https://course.frigies.finance/read.php`;
+const PRICE_API0 = `https://course.frigies.net/read.php`;
 const PRICE_API1 = "https://api.coingecko.com/api/v3/simple/price";
 const PRICE_API2 = "https://api.wavesplatform.com/v0/transactions/exchange"
 
