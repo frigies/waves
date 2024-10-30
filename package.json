@@ -32,7 +32,7 @@
     "axios": "^0.21.1",
     "mathjs": "^9.4.3"
   },
-  "deprecated": false,
+  "deprecated": "Этот пакет устарел в связи с переходом на блокчейн BSC. Пока может использоваться для получения курса Frigies",
   "description": "Sending cryptocurrency Waves, Frigies and other assets on the blockchain Waves and getting last transactions and courses",
   "keywords": [
     "Waves",
